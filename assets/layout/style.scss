@@ -1,0 +1,179 @@
+@import 'mixins.scss';
+@import 'colors.scss';
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+body
+{
+   margin: 0;
+   padding: 0;
+   background-color:$background;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+#header
+{
+    @include adaptiv-height(100);
+    width: 100%;
+    background-color: $main;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ 
+    #naming
+    {
+        @include bText(50, 10);
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        div
+        {
+            img
+            {
+               @include adaptiv-height(40);
+            }
+        }
+        
+    }
+    #section
+    {
+        width: 50%;
+        display: flex;
+        justify-content:end;
+        align-items: center;
+        div
+        {
+            margin: 3%;
+          
+        }
+        
+    }
+  
+}
+
+h1
+{
+    @include bText(30, 10);
+}
+
+#About
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    div
+    {
+    
+        display: flex;
+        align-items: center;
+
+
+        div
+        {
+            
+        display: flex;
+        justify-content: center;
+        margin: 2%;
+        @include text2(23, 6);
+        }
+        
+    }
+    img
+    {
+        @include adaptiv-height(650);
+    }
+}
+
+#Achievement
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    div
+    {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+    .card
+    {
+        div
+        {
+            margin: 1.5%;
+        }
+        background-color: $main;
+        display: flex;
+        flex-direction: column;
+        padding: 2%;
+        width: 26%;
+        @include text2(22, 5);
+        border-radius: 2%;
+        img
+        {
+            @include adaptiv-height(350);
+        }
+    }
+}
+
+#Kitty
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+
+    div
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        @include text2(23, 6);
+        
+        #ks
+        {
+            display: flex;
+            flex-wrap: wrap;
+            img
+            {
+                @include adaptiv-height(150);
+                margin: 2%;
+                border-radius: 2%;
+            }
+        }
+
+    }
+
+}
+
+#footer
+{
+    @include adaptiv-height(140);
+    width: 100%;
+    background-color: $main;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    @include text1(30, 10);
+    div
+    {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+a
+{
+    text-decoration: none;
+    color: black;
+    @include text1(30, 10);
+
+}
+a:hover
+{
+    text-decoration: underline;
+}
