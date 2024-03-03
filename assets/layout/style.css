@@ -183,7 +183,7 @@ h1 {
 }
 
 #footer {
-  height: calc(140 * 100vw / 1440);
+  height: calc(130 * 100vw / 1440);
   width: 100%;
   background-color: #ffc5f9;
   display: flex;
@@ -191,23 +191,24 @@ h1 {
   justify-content: space-around;
   font-family: Raleway;
   font-weight: 500;
-  line-height: 23px;
   letter-spacing: 0em;
   text-align: left;
 }
 @media (max-width: 767px) {
   #footer {
-    font-size: calc(10px + 34 * (100vw - 320px) / 1440);
+    font-size: calc(5px + 37.4 * (100vw - 320px) / 1440);
   }
 }
 @media (min-width: 767px) {
   #footer {
-    font-size: calc(10px + 20 * 100vw / 1440);
+    font-size: calc(5px + 22 * 100vw / 1440);
   }
 }
 #footer div {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 a {
@@ -215,18 +216,17 @@ a {
   color: black;
   font-family: Raleway;
   font-weight: 500;
-  line-height: 23px;
   letter-spacing: 0em;
   text-align: left;
 }
 @media (max-width: 767px) {
   a {
-    font-size: calc(10px + 34 * (100vw - 320px) / 1440);
+    font-size: calc(5px + 37.4 * (100vw - 320px) / 1440);
   }
 }
 @media (min-width: 767px) {
   a {
-    font-size: calc(10px + 20 * 100vw / 1440);
+    font-size: calc(5px + 22 * 100vw / 1440);
   }
 }
 

@@ -152,17 +152,19 @@ h1
 
 #footer
 {
-    @include adaptiv-height(140);
+    @include adaptiv-height(130);
     width: 100%;
     background-color: $main;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    @include text1(30, 10);
+    @include text1(27, 5);
     div
     {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -170,7 +172,7 @@ a
 {
     text-decoration: none;
     color: black;
-    @include text1(30, 10);
+    @include text1(27, 5);
 
 }
 a:hover
