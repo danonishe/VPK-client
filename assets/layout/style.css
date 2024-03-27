@@ -151,12 +151,12 @@ h1 {
 }
 @media (max-width: 767px) {
   h1 {
-    font-size: calc(10px + 34 * (100vw - 320px) / 1440);
+    font-size: calc(15px + 25.5 * (100vw - 320px) / 1440);
   }
 }
 @media (min-width: 767px) {
   h1 {
-    font-size: calc(10px + 20 * 100vw / 1440);
+    font-size: calc(15px + 15 * 100vw / 1440);
   }
 }
 
@@ -169,8 +169,9 @@ h1 {
 #About div {
   display: flex;
   align-items: center;
+  width: 100%;
 }
-#About div div {
+#About div .ttext {
   display: flex;
   justify-content: center;
   margin: 2%;
@@ -178,21 +179,24 @@ h1 {
   font-size: 18px;
   font-weight: 500;
   letter-spacing: 0em;
-  text-align: center;
   color: #3d3d3d;
+  text-align: left;
 }
 @media (max-width: 767px) {
-  #About div div {
-    font-size: calc(6px + 28.9 * (100vw - 320px) / 1440);
+  #About div .ttext {
+    font-size: calc(10px + 22.1 * (100vw - 320px) / 1440);
   }
 }
 @media (min-width: 767px) {
-  #About div div {
-    font-size: calc(6px + 17 * 100vw / 1440);
+  #About div .ttext {
+    font-size: calc(10px + 13 * 100vw / 1440);
   }
 }
+#About div .timg {
+  display: flex;
+  justify-content: center;
+}
 #About img {
-  height: calc(650 * 100vw / 1440);
   box-shadow: 5px 5px 5px grey;
 }
 
@@ -202,44 +206,135 @@ h1 {
   align-items: center;
   width: 90%;
 }
-#Achievement div {
+#Achievement .cblock {
+  width: 100%;
   display: flex;
   justify-content: space-around;
-  width: 100%;
+  flex-wrap: wrap;
 }
-#Achievement div .card {
+#Achievement .cblock .card {
   box-shadow: 5px 5px 5px grey;
   background-color: #ffc5f9;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 1%;
-  width: 26%;
+  text-align: center;
   font-family: Raleway;
   font-size: 18px;
   font-weight: 500;
   letter-spacing: 0em;
-  text-align: center;
   color: #3d3d3d;
   border-radius: 2%;
 }
-#Achievement div .card div {
+#Achievement .cblock .card div {
   margin: 1.5%;
 }
 @media (max-width: 767px) {
-  #Achievement div .card {
-    font-size: calc(5px + 28.9 * (100vw - 320px) / 1440);
+  #Achievement .cblock .card {
+    font-size: calc(10px + 20.4 * (100vw - 320px) / 1440);
   }
 }
 @media (min-width: 767px) {
-  #Achievement div .card {
-    font-size: calc(5px + 17 * 100vw / 1440);
+  #Achievement .cblock .card {
+    font-size: calc(10px + 12 * 100vw / 1440);
   }
 }
-#Achievement div .card img {
-  height: calc(270 * 100vw / 1440);
-}
 
+@media (max-width: 499.99px) {
+  .card {
+    width: 270px;
+  }
+  .card img {
+    height: 220px;
+  }
+  .tblock {
+    flex-direction: column;
+  }
+  .tblock img {
+    height: 270px;
+  }
+  .tblock.revers {
+    flex-direction: column-reverse;
+  }
+  .at {
+    margin-bottom: 0;
+  }
+  .ktext {
+    flex-direction: column;
+  }
+  #ks {
+    width: 300px;
+  }
+}
+@media (max-width: 999.99px) and (min-width: 500px) {
+  .card {
+    width: 270px;
+  }
+  .card img {
+    height: 220px;
+  }
+  .tblock {
+    flex-direction: column;
+  }
+  .tblock img {
+    height: 270px;
+  }
+  .tblock.revers {
+    flex-direction: column-reverse;
+  }
+  .at {
+    margin-bottom: 0;
+  }
+  .ktext {
+    flex-direction: column;
+  }
+  #ks {
+    width: 470px;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1499.99px) {
+  .card {
+    width: 300px;
+  }
+  .card img {
+    height: 250px;
+  }
+  .tblock img {
+    height: 500px;
+  }
+  #ks {
+    width: 100%;
+  }
+}
+@media (min-width: 1500px) and (max-width: 1999.99px) {
+  .card {
+    width: 400px;
+  }
+  .card img {
+    height: 300px;
+  }
+  .tblock img {
+    height: 650px;
+  }
+  #ks {
+    width: 100%;
+  }
+}
+@media (min-width: 2000px) {
+  .card {
+    width: 500px;
+  }
+  .card img {
+    height: 400px;
+  }
+  .tblock img {
+    height: 800px;
+  }
+  #ks {
+    width: 100%;
+  }
+}
 #Kitty {
   display: flex;
   flex-direction: column;
@@ -248,36 +343,35 @@ h1 {
 }
 #Kitty div {
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 100%;
+  text-align: left;
   font-family: Raleway;
   font-size: 18px;
   font-weight: 500;
   letter-spacing: 0em;
-  text-align: center;
   color: #3d3d3d;
 }
 @media (max-width: 767px) {
   #Kitty div {
-    font-size: calc(6px + 28.9 * (100vw - 320px) / 1440);
+    font-size: calc(10px + 22.1 * (100vw - 320px) / 1440);
   }
 }
 @media (min-width: 767px) {
   #Kitty div {
-    font-size: calc(6px + 17 * 100vw / 1440);
+    font-size: calc(10px + 13 * 100vw / 1440);
   }
 }
 #Kitty div #ks {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 }
 #Kitty div #ks img {
-  height: calc(150 * 100vw / 1440);
   box-shadow: 3px 3px 3px grey;
   margin: 2%;
   border-radius: 2%;
   transition: transform 0.5s;
+  width: 26%;
 }
 #Kitty div #ks img:hover {
   transform: scale(1.3);
@@ -286,6 +380,7 @@ h1 {
 #footer {
   height: calc(130 * 100vw / 1440);
   width: 100%;
+  box-shadow: 0 -2px 10px grey;
   background-color: #ffc5f9;
   display: flex;
   align-items: center;
@@ -297,19 +392,27 @@ h1 {
 }
 @media (max-width: 767px) {
   #footer {
-    font-size: calc(5px + 37.4 * (100vw - 320px) / 1440);
+    font-size: calc(8px + 32.3 * (100vw - 320px) / 1440);
   }
 }
 @media (min-width: 767px) {
   #footer {
-    font-size: calc(5px + 22 * 100vw / 1440);
+    font-size: calc(8px + 19 * 100vw / 1440);
   }
 }
-#footer div {
+#footer .contact {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+#footer .social {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#footer .social div {
+  margin: 4%;
 }
 
 a {
@@ -322,15 +425,25 @@ a {
 }
 @media (max-width: 767px) {
   a {
-    font-size: calc(5px + 37.4 * (100vw - 320px) / 1440);
+    font-size: calc(8px + 32.3 * (100vw - 320px) / 1440);
   }
 }
 @media (min-width: 767px) {
   a {
-    font-size: calc(5px + 22 * 100vw / 1440);
+    font-size: calc(8px + 19 * 100vw / 1440);
   }
 }
 
 a:hover {
   text-decoration: underline;
+}
+
+.at {
+  width: 90%;
+  display: flex;
+  justify-content: start;
+}
+
+.svgicon {
+  height: calc(50 * 100vw / 1440);
 }/*# sourceMappingURL=style.css.map */

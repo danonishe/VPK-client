@@ -56,7 +56,7 @@ body
 
 h1
 {
-    @include bText(30, 10);
+    @include bText(30, 15);
 }
 
 #About
@@ -70,21 +70,32 @@ h1
     
         display: flex;
         align-items: center;
-
-
-        div
-        {
-            
+        width: 100%;
+        .ttext
+        { 
         display: flex;
         justify-content: center;
         margin: 2%;
-        @include text2(23, 6);
+        @include text2(23, 10);
+        text-align: left;
+    
         }
+
+        .timg
+        {
+            display: flex;
+            justify-content: center
+        }
+
+ 
         
     }
+
+
+
     img
     {
-        @include adaptiv-height(650);
+        
         box-shadow: 5px 5px 5px grey;
     }
 
@@ -96,11 +107,16 @@ h1
     flex-direction: column;
     align-items: center;
     width: 90%;
-    div
+
+
+    .cblock
     {
+        width: 100%;
+   
         display: flex;
         justify-content: space-around;
-        width: 100%;
+        flex-wrap: wrap;
+           
 
         .card
         {
@@ -114,17 +130,158 @@ h1
             flex-direction: column;
             align-items: center;
             padding: 1%;
-            width: 26%;
-            @include text2(22, 5);
+            text-align: center;
+            // width: 300px;
+            @include text2(22, 10);
             border-radius: 2%;
-            img
-            {
-                @include adaptiv-height(270);
-            }
+            
+    
         }
     }
    
 }
+
+@media (max-width: 499.99px) {
+    .card
+    {
+        width: 270px;
+        img
+        {
+            height: 220px;
+        }
+    }
+
+    .tblock
+    {
+        flex-direction: column;
+        img
+        {
+            height: 270px;
+        }
+
+    }
+    .tblock.revers
+    {
+        flex-direction: column-reverse;
+    }
+    .at
+    {
+      margin-bottom: 0;
+    }
+    .ktext
+    {
+        flex-direction: column;
+    }
+
+    #ks 
+    {
+        width: 300px;
+    }
+    
+}
+@media (max-width: 999.99px)and  (min-width: 500px) 
+{
+    .card
+    {
+        width: 270px;
+        img
+        {
+            height: 220px;
+        }
+    }
+
+    .tblock
+    {
+        flex-direction: column;
+        img
+        {
+            height: 270px;
+        }
+
+    }
+    .tblock.revers
+    {
+        flex-direction: column-reverse;
+    }
+    .at
+    {
+      margin-bottom: 0;
+    }
+    .ktext
+    {
+        flex-direction: column;
+    }
+
+    #ks 
+    {
+        width: 470px;
+    }
+
+}
+
+
+@media (min-width: 1000px) and (max-width: 1499.99px)
+{
+    .card
+    {
+        width: 300px;
+        img
+        {
+            height: 250px;
+        }
+    }
+    .tblock img
+    {
+        height: 500px;
+    }
+    #ks 
+    {
+        width: 100%;
+    }
+
+}
+
+
+@media (min-width: 1500px) and (max-width: 1999.99px)
+{
+    .card
+    {
+        width: 400px;
+        img
+        {
+            height: 300px;
+        }
+    }
+    .tblock img
+    {
+        height: 650px;
+    }
+    #ks 
+    {
+        width: 100%;
+    }
+}
+
+@media (min-width: 2000px)
+{
+    .card
+    {
+        width: 500px;
+        img
+        {
+            height: 400px;
+        }
+    }
+    .tblock img
+    {
+        height: 800px;
+    }
+    #ks 
+    {
+        width: 100%;
+    }
+}
+ 
 
 #Kitty
 {
@@ -136,23 +293,25 @@ h1
     div
     {
         display: flex;
-        justify-content: center;
         align-items: center;
-        width: 100%;
-        @include text2(23, 6);
+       
+        text-align: left;
+        @include text2(23, 10);
         
         #ks
         {
             display: flex;
+            justify-content: center;
             flex-wrap: wrap;
           
             img
             {
-                @include adaptiv-height(150);
+                // @include adaptiv-height(150);
                 box-shadow: 3px 3px 3px grey;
                 margin: 2%;
                 border-radius: 2%;
                 transition: transform 0.5s;
+                width: 26%;
             }
 
             img:hover
@@ -171,17 +330,28 @@ h1
 {
     @include adaptiv-height(130);
     width: 100%;
+    box-shadow: 0 -2px 10px grey;
     background-color: $main;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    @include text1(27, 5);
-    div
+    @include text1(27, 8);
+    .contact
     {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+    .social
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        div
+        {
+            margin: 4%;
+        }
     }
 }
 
@@ -189,15 +359,22 @@ a
 {
     text-decoration: none;
     color: black;
-    @include text1(27, 5);
+    @include text1(27, 8);
 
 }
 a:hover
 {
     text-decoration: underline;
 }
-
+.at{
+    width: 90%;
+    display: flex;
+    justify-content: start;
+}
 
 //----------
-
+.svgicon
+{
+    @include adaptiv-height(50);
+}
 
